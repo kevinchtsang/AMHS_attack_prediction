@@ -1,5 +1,5 @@
 function [GMA] = Alg_GMA(FPR,TPR)
-%ALG_GMA Summary of this function goes here
+%ALG_GMA Calculates Geometric mean accuracy
 %   Geometric mean accuracy = sqrt((TP/(TP+FN))*(TN/(TN+FP)))
 %   = sqrt(TPR*(1-FPR))
 % FPR = OPTROCPT(1); X

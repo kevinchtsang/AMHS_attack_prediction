@@ -4,13 +4,13 @@ This repository contains the code that has been used in the study ["Application 
 
 We used the AMHS dataset to benchmark the ability of four machine learning techniques to predict asthma attacks.
 
-If you would like to use the code, please attribute/cite it to the associated paper or this repository
+If you would like to use the code, please attribute/cite it to the associated paper or this repository (see Citation below).
 
 ## Data
 
 Data from the Asthma Mobile Health Study (AMHS) is available at [Synapse](https://www.synapse.org/asthmahealth)
 
-Please do not upload any of the data from AMHS when committing.
+Please do not upload any of the data from AMHS when committing, including CSVs and any Matlab objects with data.
 
 This analysis will make use of "Daily Prompt Survey", "Weekly Prompt Survey", and "EQ5D Survey"
 
@@ -27,11 +27,14 @@ Symbolic Math Toolbox                             |    Version 8.4         (R201
 
 ## Getting Started
 
-`Create_` files will create `.mat` files
-`Alg_` and `Convert_` files are functions used in the analysis
+`Create_` files will create `.mat` files.
+
+`Alg_` and `Convert_` files are functions used in the analysis.
+
+First, download the AMHS data as CSVs and put them in the `data` folder.
 
 Please run the files in the following order:
-1. `XXX.m` to convert the downloaded CSVs to .mat objects
+1. `XXX.m` to convert the downloaded CSVs to `.mat` objects
 2. `Create_DailyPromptSurvey_Augmented.m` to add columns based on `get_worse` answers
 3. `Create_AllPatients.m` to create `AllPatients` in the workspace
 4. `Create_QandA_Lookup.m` defines a dictionary for answers to daily questionnaire

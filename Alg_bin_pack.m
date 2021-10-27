@@ -1,12 +1,16 @@
 function [weekNumSorted, bins] = Alg_bin_pack(weekNum,weight,maxCapacity)
-%ALG_BIN_PACK Use bin packing algorithm to put 
-%   weekNum is WP_Stable_Calandar
-bins = zeros(size(weekNum));
-binLoad = 0;%zeros(size(weekNum));
-binNum = 1;
-% binWeekNum = 0;
+%ALG_BIN_PACK Use bin packing algorithm to package nearby periods
+%   weekNum is calendar week number 
+%   weight is a vector of weights for bin packing. In this application, it
+%   is frequency (the number of points in the period)
+%   maxCapacity is the maximum capacity of each bin
+
+bins    = zeros(size(weekNum));
+binLoad = 0;
+binNum  = 1;
+
 binCalWeek = 0;
-binStable = 0;
+binStable  = 0;
 
 longStr = sprintf('%s_', weekNum);
 dataMat = sscanf(longStr, '%g_', [3, inf]).';
@@ -21,13 +25,11 @@ weekNumSorted = regexprep(weekNumSorted,' +','_'); %reformat
 
 for i =1:length(weekNum)
     % define current and next weekNum
-%     wn = textscan(weekNum(i),'%s','Delimiter','_');
     wn = dataMat(i,:);
-    f = dataMat(i,4);
+    f  = dataMat(i,4);
+    
     % dont combine stable and unstable
     % dont allow combination if beyond 2 weeks apart
-%     if (i>1)&&((str2num(wn{1}{2})~=binStable) || ...
-%             (abs(str2num(wn{1}{3})-binCalWeek)>=3))
     if (i>1)&&((wn(2)~=binStable) || ...
             ((abs(wn(3)-binCalWeek)>=3) && ...
             (abs(wn(3)-binCalWeek)<=49)))
@@ -35,18 +37,17 @@ for i =1:length(weekNum)
         binLoad = 0;
     end
     
-    if (f+binLoad)<=maxCapacity
-        bins(i) = binNum;
-        binLoad = f+binLoad;%+sum(binLoad(bins==binNum));
+    if (f + binLoad) <= maxCapacity
+        bins(i)      = binNum;
+        binLoad      = f + binLoad;
     else
-        binNum = binNum + 1;
+        binNum  = binNum + 1;
         bins(i) = binNum;
         binLoad = f;
     end
     
     
     binStable = wn(2);
-%     binWeekNum = str2num(wn{1}{1});
     binCalWeek = wn(3);
 end
 end
