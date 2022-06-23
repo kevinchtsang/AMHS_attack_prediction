@@ -4,7 +4,7 @@
 % - TriggerNA if invalid answer
 
 clc;clear all;
-load DailyPromptSurvey_Corrected;
+load DailyPromptSurvey;
 
 numDailySurvey=size(DailyPromptSurvey,1);
 for kd=1:height(DailyPromptSurvey)
