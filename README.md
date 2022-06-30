@@ -43,7 +43,8 @@ Please run the files in the following order:
 4. `Create_QandA_Lookup.m` defines a dictionary for answers to daily questionnaire
 5. `Filter_WeeklyEvents.m` to create the training data
 6. `Model_LASSO.m` to rank and select the features
-7. `Model_FitModels.m` to benchmark algorithms
+7. `Model_Base.m` to fit base model
+8. `Model_FitModels.m` to benchmark algorithms
 
 ## Citation
 

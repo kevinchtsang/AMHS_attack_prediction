@@ -25,7 +25,7 @@ load best_features_lasso
 
 usePeakflow = TF(usePF);
 disp(['usePeakflow=', num2str(usePeakflow)])
-% using best_features according to FitModels_Dec022019B
+% using best_features according to Model_LASSO
 selected_features = double(best_features_lasso(1:optNumFeatures,3))';
 
 % random_features = (best_features(:,3));
