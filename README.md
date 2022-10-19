@@ -1,5 +1,7 @@
 # Asthma Attack Predictions based on AMHS
 
+[![DOI](https://zenodo.org/badge/421469152.svg)](https://zenodo.org/badge/latestdoi/421469152)
+
 This repository contains the code that has been used in the study ["Application of Machine Learning to Support Self-Management of Asthma with mHealth" (Tsang et al., 2020)](https://doi.org/10.1109/EMBC44109.2020.9175679) 
 
 We used the AMHS dataset to benchmark the ability of four machine learning techniques to predict asthma attacks.
