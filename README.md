@@ -51,3 +51,7 @@ Please run the files in the following order:
 ## Citation
 
 K. C. H. Tsang, H. Pinnock, A. M. Wilson and S. Ahmar Shah, "Application of Machine Learning to Support Self-Management of Asthma with mHealth," *2020 42nd Annual International Conference of the IEEE Engineering in Medicine & Biology Society (EMBC)*, 2020, pp. 5673-5677, doi: 10.1109/EMBC44109.2020.9175679.
+
+or
+
+Kevin Tsang, "kevinchtsang/AMHS_attack_prediction: EMBC 2020 Version". Zenodo, Oct. 19, 2022. doi: 10.5281/zenodo.7226240.
